@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+    text-decoration:underline;
+}
+p{
+    text-align: center;
+    font-weight:550;
+    line-height: 1.9;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+ul{
+    text-align: center;
+    list-style-position: inside;
+    padding-left: 0;
+    margin : 0 auto
+}
