@@ -1,0 +1,70 @@
+*{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    color : #b92b27;
+}
+
+h3{
+    color :darkslategray;
+}
+
+#login{
+    background-color: #b92b27;
+    color : white;
+}
+
+#signup{
+    color : #b92b27;
+    background-color: white;
+    
+}
+
+.upvote{
+    background-color: green;
+    color : white;
+}
+
+input[type="text"] {
+    color : red;
+}
+input[type="password"] {
+    color:green;
+}
+
+.post a{
+    color : purple;
+    background-color: yellow;
+}
+
+nav ul li{
+    color :hotpink;
+    background-color: rgb(98, 174, 148);
+}
+
+nav ul li a{
+    color : red;
+}
+
+p+h3{
+    text-decoration: underline;
+}
+
+.upvote + button{
+    background-color:cornflowerblue;
+    color:darkblue
+}
+
+div > input{
+    background-color:darksalmon;
+}
+
+button:hover{
+    background-color: black;
+    color:white;
+}
+
+h3:hover{
+    text-decoration: none;
+}
