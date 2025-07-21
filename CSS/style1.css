@@ -7,12 +7,20 @@ div {
     border-color : black; */
 
     border : 5px solid black;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
 }
 
 h1{
     /* border-width : 2px;
     border-style : dashed;
     border-color:green; */
+
+    text-align: center;
 
     border: 2px dashed;
 
@@ -21,4 +29,11 @@ h1{
     border-top-color:green;
     border-bottom-color: yellow;
 
+}
+
+button{
+    height : 50px;
+    width : 100px;
+    border-width: 1px;
+    border-radius: 20px;
 }
