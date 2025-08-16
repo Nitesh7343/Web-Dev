@@ -1,0 +1,27 @@
+.block1{
+    background-color: rgb(239, 146, 146);
+    display : inline
+}
+
+.span1{
+    background-color: rgb(134, 235, 134);
+    display : block;
+
+}
+
+#span {
+    /* background-color: rgb(101, 101, 225); */
+    border : 2px solid black;
+    height : 100px;
+    width : 200px;
+    padding : 50px;
+    margin : 50px;
+}
+
+div{
+    border : 2px solid black;
+    height : 100px;
+    width : 200px;
+    padding : 50px;
+    margin : 50px;
+}
