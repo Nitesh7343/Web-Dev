@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <script src = "TrafficLight.js"></script>
+    <style>
+        .traffic-light {
+            width: 50px;
+            height : 200px;
+            background-color: black;
+            border-radius: 10px;
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+             
+        }
+        #red, #yellow, #green {
+            width : 40px;
+            height : 40px;
+            border-radius: 50%;
+        }
+        #red {
+            background-color: red;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        #green {
+            background-color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class = "traffic-light">
+        <div id = "red"></div>
+        <div id = "yellow"></div>
+        <div id = "green"></div>
+    </div>
+</body>
+</html>
