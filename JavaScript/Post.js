@@ -7,22 +7,22 @@ const post = {
 };
 
 
-const nitesh = {
-    insta: {
+const nitesh = [
+    insta= {
         username: "_the.nitesh",
         email: "niteshsingh7343@gmail.com",
         password: "12345@12345",
     },
 
-    mobile :{
+    mobile ={
         brand: "Samsung",
         model: "S23 FE",
         color: "Space Grey",
     },
 
-    laptop: {
+    laptop= {
         brand : "Apple",
         model : "Macbook Air M1",
         color : "Silver Metal",
     }
-}
+]

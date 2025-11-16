@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="GuessingGame.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Welcome to the Number Guessing Game</h1>
+        <h5>Developed by the Nitesh</h6>
+    </div>
+    <div class = "logic">
+        <div class="logic1">
+    <input type="number" id = "maxRange" class = "input" placeholder="Enter maximum number">
+    <button onclick="getRange()">Done</button>
+    </div>
+    <h2 id = "rangeText"></h2>
+    <div class="logic2">
+    <input type="number" id = "userGuess" class = "input" placeholder="Can you guess the no ?">
+    <button onclick="checkGuess()">Submit</button>
+    </div>
+    <h2 id = "result"></h2>
+    </div>
+
+    <script src = "GuessingGame.js"></script>
+</body>
+</html>
