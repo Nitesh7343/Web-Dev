@@ -46,10 +46,31 @@
 
 // console.log(check(13));
 
-console.log("Hello!");
+// console.log("Hello!");
 
-setInterval(() => {
-    console.log("Panda")
-},4000);
+// setInterval(() => {
+//     console.log("Panda")
+// },4000);
 
-console.log("I'm");
+// console.log("I'm");
+
+
+// let nums = [1,3,6,7,2,2,4,90];
+// let double = nums.filter((el) => {return el%2 != 0});
+
+// console.log(double);
+
+// let nums = [1,3,6,7,2,2,4,90];
+// let double = nums.map((el) => {return el*2;});
+
+// console.log(double);
+
+
+// let nums = [1,3,6,7,2,2,4,90];
+// let double = nums.every((el) => {return el > 0});
+
+// console.log(double);
+
+let num = [1,2,3,67,5,0,4,3,7];
+let abs = num.reduce((res,el) => {return res < el ? res : el;});
+console.log(abs);
