@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Ranking System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #searchBox {
+            width: 250px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid #777;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        td, th {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background: #d6ebff;
+        }
+
+        #rankBtn {
+            margin-top: 12px;
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #rankBtn:hover {
+            background: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Student Ranking Table</h2>
+
+    <input type="text" id="searchBox" placeholder="Search by name or roll…">
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Rank</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Palak</td>
+                <td contenteditable="true">78</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bob</td>
+                <td contenteditable="true">92</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Karan</td>
+                <td contenteditable="true">85</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Saurav</td>
+                <td contenteditable="true">90</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="rankBtn">Calculate Rank</button>
+
+
+    <!-- ---------- JavaScript (Task 3) ---------- -->
+    <script>
+
+        /* -------------------- LIVE SEARCH -------------------- */
+        document.getElementById("searchBox").addEventListener("keyup", function () {
+            let filter = this.value.toLowerCase();
+            let rows = document.querySelectorAll("#studentTable tbody tr");
+
+            rows.forEach(row => {
+                let text = row.textContent.toLowerCase();
+                row.style.display = text.includes(filter) ? "" : "none";
+            });
+        });
+
+
+        /* -------------------- RANK CALCULATION -------------------- */
+        document.getElementById("rankBtn").addEventListener("click", function () {
+
+            let rows = Array.from(document.querySelectorAll("#studentTable tbody tr"));
+
+            // Extract student data
+            let students = rows.map(row => {
+                return {
+                    row: row,
+                    marks: parseInt(row.cells[2].textContent) || 0
+                };
+            });
+
+            // Sort by marks (high → low)
+            students.sort((a, b) => b.marks - a.marks);
+
+            // Assign ranks
+            let rank = 1;
+            students.forEach(s => {
+                s.row.cells[3].textContent = rank++;
+            });
+
+            // Reorder rows in table after sorting
+            let tbody = document.querySelector("#studentTable tbody");
+            tbody.innerHTML = "";   // clear table
+
+            students.forEach(s => tbody.appendChild(s.row));
+
+        });
+
+    </script>
+
+</body>
+</html>
