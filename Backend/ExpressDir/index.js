@@ -13,16 +13,23 @@ app.get("/",(req,res) => {
     console.log("Request Received on root");
     res.send("Receiver on route root");
 });
-app.get("/apple",(req,res) => {
-    console.log("Request Received on apple");
-    res.send("Receiver on route apple");
-});
-app.get("/orange",(req,res) => {
-    console.log("Request Received on orange");
-    res.send("Receiver on route orange");
-});
+// app.get("/apple",(req,res) => {
+//     console.log("Request Received on apple");
+//     res.send("Receiver on route apple");
+// });
+// app.get("/orange",(req,res) => {
+//     console.log("Request Received on orange");
+//     res.send("Receiver on route orange");
+// });
 
-app.use((req,res) => {
-    console.log("Wrong path");
-    res.send("Wrong path");
+// app.use((req,res) => {
+//     console.log("Wrong path");
+//     res.send("Wrong path");
+// })
+
+// intagram username function.
+
+app.get("/:username/:id", (req,res) => {
+    let {username,id} = req.params;
+    res.send(`Welcome to the page of ${username}`);
 })
