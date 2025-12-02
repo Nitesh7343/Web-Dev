@@ -10,8 +10,8 @@ app.listen(port, () => {
 })
 
 app.get("/",(req,res) => {
-    console.log("Request Received on /");
-    res.send("Receiver on route /");
+    console.log("Request Received on root");
+    res.send("Receiver on route root");
 });
 app.get("/apple",(req,res) => {
     console.log("Request Received on apple");
