@@ -43,5 +43,49 @@
                 "comments":580
             }
         ]
+    },
+    "nitesh": {
+        "name":"Bunny",
+        "followers":47000,
+        "following":1,
+        "post": [
+            {
+                "image":"https://plus.unsplash.com/photo7",
+                "likes":2500000,
+                "comments":34700
+            },
+            {
+                "image":"https://plus.unsplash.com.photo8",
+                "likes":990400,
+                "comments":23497
+            },
+            {
+                "image":"https://plus.unsplash.comphoto9",
+                "likes":90897,
+                "comments":54380
+            }
+        ]
+    },
+    "ashu": {
+        "name":"Dora",
+        "followers":9807000,
+        "following":1,
+        "post": [
+            {
+                "image":"https://plus.unsplash.com/photo10",
+                "likes":9900000,
+                "comments":94700
+            },
+            {
+                "image":"https://plus.unsplash.com.photo11",
+                "likes":8890400,
+                "comments":983497
+            },
+            {
+                "image":"https://plus.unsplash.comphoto12",
+                "likes":8890897,
+                "comments":99804380
+            }
+        ]
     }
 }
