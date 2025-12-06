@@ -1,0 +1,47 @@
+{
+    "cats": {
+        "name":"billi_mosi",
+        "followers":2500,
+        "following":26,
+        "post": [
+            {
+                "image":"https://plus.unsplash.com/photo1",
+                "likes":200,
+                "comments":17
+            },
+            {
+                "image":"https://plus.unsplash.com.photo2",
+                "likes":3400,
+                "comments":123
+            },
+            {
+                "image":"https://plus.unsplash.comphoto3",
+                "likes":47,
+                "comments":58
+            }
+        ]
+    },
+
+    "dogs": {
+        "name":"dogesh_bhai",
+        "followers":3700,
+        "following":7,
+        "post": [
+            {
+                "image":"https://plus.unsplash.com/photo4",
+                "likes":25000,
+                "comments":1700
+            },
+            {
+                "image":"https://plus.unsplash.com.photo5",
+                "likes":300,
+                "comments":297
+            },
+            {
+                "image":"https://plus.unsplash.comphoto6",
+                "likes":907,
+                "comments":580
+            }
+        ]
+    }
+}

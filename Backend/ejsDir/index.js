@@ -12,6 +12,20 @@ app.get("/",(req,res) => {
     res.render("home.ejs");
 });
 
+app.get("/ig/:username",(req,res) => {
+    const { username } = req.params;
+    // let names = ["nitu","ashu","pikachu","Dora"];
+    const igData = require("./data.json");
+    const data = igData[username];
+    console.log(data);
+    res.render("instagram.ejs",{data});
+});
+
+app.get("/dice",(req,res) => {
+    let roll = Math.floor(Math.random()*6)+1;
+    res.render("rollDice.ejs",{roll});
+});
+
 app.get("/hello",(req,res) => {
     console.log("Server working");
     res.send("Hemlo Baby");
