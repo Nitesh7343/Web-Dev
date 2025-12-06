@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
+    <style>
+        .images {
+            display:flex;
+            justify-content:space-evenly;
+        }
+    </style>
 </head>
 <body>
     <h2>This page belongs to <%= data.name %></h2>
@@ -14,6 +20,17 @@
         Followings: <%= data.following%></p>
     <hr>
 
+    <div class="images">
+     <% for(let post of data.post) {%>
+        <div class="img">
+            <img src = "<%= post.image %>" alt = "image" width="300px" height="300px">
+
+            <p>Likes: <%= post.likes%> &nbsp; &nbsp; &nbsp; &nbsp;
+       Comments: <%= post.comments%></p>
+       </div>
+        <% } %>
+
+    </div>
 
 
 

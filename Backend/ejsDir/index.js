@@ -17,8 +17,8 @@ app.get("/ig/:username",(req,res) => {
     // let names = ["nitu","ashu","pikachu","Dora"];
     const igData = require("./data.json");
     const data = igData[username];
-    console.log(data);
-    res.render("instagram.ejs",{data});
+    if(data) res.render("instagram.ejs",{data});
+    else res.render("error.ejs");
 });
 
 app.get("/dice",(req,res) => {
