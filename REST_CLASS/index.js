@@ -7,6 +7,10 @@ const port = 3000;
 
 const path = require("path");
 
+const mathodeOverride = require("method-override");
+
+app.use(mathodeOverride("_method"));
+
 app.use(express.urlencoded({ extended:true }));
 
 app.set("view engine","ejs");
@@ -68,7 +72,29 @@ app.get("/posts/:id",(req,res) => {
     res.render("show.ejs",{post});
 });
 
+app.patch("/posts/:id",(req,res) => {
+    const {id} = req.params;
+    newContent = req.body.content;
 
+    let post = posts.find((p) => p.id === id);
+    
+    if (!post) {
+        return res.send("Post not found!");
+    }
+    post.content = newContent;
+    res.redirect("/posts");
+});
+
+app.get("/posts/:id/edit",(req,res) => {
+    const {id} = req.params;
+    let post = posts.find((p) => p.id === id);
+
+    if (!post) {
+        return res.send("Post not found!");
+    }
+
+    res.render("edit.ejs",{post});
+});
 
 
 app.listen(port,() => {
