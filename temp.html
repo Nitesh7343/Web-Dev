@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learning JS</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: #555;
+    color :#fff;
+}
+
+form{
+    display: block;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+input{
+    padding: 5px;
+    background-color:#222;
+    color:#fff;
+}
+
+.main {
+    max-width: 300px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #2b2b2b;
+    border: 1px solid #333;
+}
+
+
+.Profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.Profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+h3{
+    margin-top: 5px;
+}
+
+h5{
+    margin-top: 5px;
+}
+
+p{
+    margin-top: 5px;
+}
+    </style>
+</head>
+
+<body>
+
+
+<form >
+    <input type="text" placeholder="Profile pic"> <br> <br> 
+    <input type="text" placeholder="Name"> <br><br>
+    <input type="text" placeholder="User Name"> <br><br>
+    <input type="text" placeholder="Title"> <br><br>
+    <input id="button" type="submit" value="submit">
+    
+</form>
+<br><br>
+
+<!-- <div id="main">
+    <div id="Profile">
+        <img src="https://media.istockphoto.com/id/1285124274/photo/middle-age-man-portrait.jpg?s=612x612&w=0&k=20&c=D14m64UChVZyRhAr6MJW3guo7MKQbKvgNVdKmsgQ_1g=" alt="Poke">
+    </div>
+
+    <h3>Name</h3>
+    <h5>User Name</h5>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+</div> -->
+
+    <script>
+        let inputs = document.querySelectorAll("form input[type='text']");
+let button = document.querySelector("#button");
+
+button.addEventListener("click", function (e) {
+    e.preventDefault();
+    toba();
+});
+
+function toba() {
+    let body = document.body;
+
+    let main = document.createElement("div");
+    main.classList.add("main");
+
+    let Profile = document.createElement("div");
+    Profile.classList.add("Profile");
+
+    let img = document.createElement("img");
+    img.src = inputs[0].value;
+
+    let h3 = document.createElement("h3");
+    h3.textContent = inputs[1].value;
+
+    let h5 = document.createElement("h5");
+    h5.textContent = inputs[2].value;
+
+    let p = document.createElement("p");
+    p.textContent = inputs[3].value;
+
+    Profile.appendChild(img);
+    main.append(Profile, h3, h5, p);
+    body.appendChild(main);
+}
+    </script>
+</body>
+
+</html>
