@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nitesh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "mysql2": "^3.16.2"
+  }
 }
