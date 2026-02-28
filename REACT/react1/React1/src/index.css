@@ -1,6 +1,32 @@
 *{
   padding:0px;
   margin : 0px;
-  background-color: rgb(28, 28, 28);
-  color : white;
+}
+
+.card {
+  background-color: burlywood;
+  padding : 2px;
+  margin : 5px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction:row;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+a{
+  text-decoration: none;
+  color:crimson;
+  padding : 5px;
+}
+
+.navbar{
+  padding : 5px;
+  margin : 5px;
+  height : 40px;
+  background-color: rgb(17, 164, 233);
+  align-items: center;
+  border-radius: 20 px;
 }

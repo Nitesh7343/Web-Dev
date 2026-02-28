@@ -1,12 +1,14 @@
 import React from 'react'
+import Card from './components/Card.jsx'
+import Navbar from './components/navbar.jsx'
 
-const app = () => {
+const App = () => {
   return <div>
-    <h1>Hello</h1>
-    <h5>This is react app</h5>
+    <Navbar/>
+    <Card/>
   </div>
 }
 
-export default app;
+export default App;
 
 
