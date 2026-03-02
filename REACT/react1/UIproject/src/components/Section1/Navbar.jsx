@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Navbar'
 
 const Navbar = () => {
   return (
-    <div>
-      This is Navbar
+    <div className='flex items-center justify-between py-6 px-14'>
+      <h4 className='bg-black text-white uppercase px-6 py-2 rounded-full text-sm'>Projects</h4>
+      <button className='bg-gray-200 uppercase px-6 py-2 rounded-full tracking-widest text-xs'>Try out amazing projects</button>
     </div>
   )
 }
